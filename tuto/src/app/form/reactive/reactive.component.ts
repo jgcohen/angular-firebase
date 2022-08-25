@@ -20,7 +20,7 @@ export class ReactiveComponent implements OnInit {
   }
   initCampaignFOrm(): void {
     this.campaignForm = this.formBuilder.group({
-      index: [0],
+      index: [null],
       title: ['', Validators.required],
       description: '',
       players: 0
@@ -29,10 +29,12 @@ export class ReactiveComponent implements OnInit {
   onSubmit(): void {
     const campaignIndex = this.campaignForm.value.index
     const campaign = this.campaignForm.value
-    if (campaignIndex === null || campaignIndex === undefined) {
+    if (campaignIndex === null || campaignIndex === undefined) { //creation
       delete campaign.index
-      this.campaigns = this.campaignService.createCampaign(campaign)
-    } else {
+      this.campaignService.createCampaign(campaign).then(campaign => {
+        this.campaigns.push(campaign)
+      }).catch(console.error)
+    } else {  // MOdification
       delete campaign.index
       this.campaigns = this.campaignService.editCampaign(campaign,campaignIndex)
     }

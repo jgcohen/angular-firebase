@@ -6,7 +6,7 @@ export const environment = {
     apiKey: 'AIzaSyAOh94gy_Jzjgyo0pIBLYsPeKu7E0ARxZg',
     authDomain: 'campaigns-640b1.firebaseapp.com',
     messagingSenderId: '360868542926',
-    databaseURL: 'https://console.firebase.google.com/project/campaigns-640b1/database/campaigns-640b1-default-rtdb/data/~2F'
+    databaseURL: 'https://campaigns-640b1-default-rtdb.europe-west1.firebasedatabase.app/'
 
   },
   production: true
