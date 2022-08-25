@@ -1,0 +1,10 @@
+<button *ngIf="!display" (click)="onclick()" class="btn btn-primary">display text</button>
+<button *ngIf="display" (click)="onclick()" class="btn btn-primary">hide text</button>
+<p *ngIf="display" [id]="paragraphId" >the text is :{{text}}</p>
+<input type="text" name="text" class="form-control" placeholder="ecrivez ici" [(ngModel)]="text">
+
+<ul>
+  <li *ngFor="let item of items" >
+    <p>{{item.name}}</p>
+  </li>
+</ul>
