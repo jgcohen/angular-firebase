@@ -122,6 +122,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tuto:build:production",
+            "firebaseProject": "campaigns-640b1",
+            "firebaseHostingSite": "campaigns-640b1"
+          }
         }
       }
     }

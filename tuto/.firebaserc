@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "campaigns-640b1": {
+      "hosting": {
+        "tuto": [
+          "campaigns-640b1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "campaigns-640b1"
+  }
+}
